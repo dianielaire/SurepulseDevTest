@@ -28,9 +28,12 @@ $http.get('https://jsonplaceholder.typicode.com/photos').then(function(response)
 
 
 }]);
-app.filter('startFrom', function() {
-    return function(input, start) {
-        start = +start; //parse to int
-        return input.slice(start);
-    }
+devModule.filter('startFrom', function() {
+  return function(input, start) {
+      if (!angular.isArray(input)) {
+          return [];
+      }
+      start = +start; //parse to int
+      return input.slice(start);
+  };
 });
