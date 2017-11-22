@@ -22,7 +22,7 @@ devModule.controller('ngController', ['$scope','$http','$filter', function($scop
     }
 
 $http.get('https://jsonplaceholder.typicode.com/photos').then(function(response){
-  $scope.posts = response.data;
+  $scope.photos = response.data;
   $scope.data = response.data
 })
 

@@ -68,11 +68,11 @@
 
 					<!-- <uib-pagination total-items="posts.length" ng-model="currentPage" items-per-page="pageSize"></uib-pagination> -->
 					<ul class="list-unstyled">
-						<li  class=" media my-4" ng-repeat="post in posts | filter:q | startFrom: currentPage * pageSize|  limitTo:pageSize">
-							<img class="mr-3" src="{{post.thumbnailUrl}}" style="height:70px; width:70px"></img>
+						<li  class=" media my-4" ng-repeat="photo in photos | filter:q | startFrom: currentPage * pageSize|  limitTo:pageSize">
+							<img class="mr-3" src="{{photo.thumbnailUrl}}" style="height:70px; width:70px"></img>
 							<div class="media-body">
-								<h5 class="mt-0 mb-1">id: {{post.id}}</h5>
-								title: {{post.title}}
+								<h5 class="mt-0 mb-1">id: {{photo.id}}</h5>
+								title: {{photo.title}}
 							</div>
 						</li>
 					</ul>
